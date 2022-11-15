@@ -10,3 +10,9 @@
 丢弃工作区修改    git checkout --文件名
 暂存区的修改撤销到工作区     git reset HEAD 文件名
 移出文件          rm 文件名    若想撤销删除操作  git checkout --文件名   (版本库中存在该文件)  若想把版本库中的文件也删除   git rm 文件名
+
+本地git仓库 远程同步到 GitHub仓库      在本地仓库中 git remote add origin git@github.com:hggaun(github账户名)/ceshi.git
+将本地库的内容推送到远程库中(把当前分支master推送到远程)           git push -u origin master     (u参数是第一次推送时 远程库为空)  在以后的推送中直接使用git push -u origin master 将本地修改的内容推送至GitHub上
+删除远程库(添加时地址错误/删库) ---- 只是解除本地与远程的绑定关系
+    查看远程库信息         git remote -v
+    删除远程库            git remote rm origin(远程库名)
